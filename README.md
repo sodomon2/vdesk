@@ -4,4 +4,4 @@ Vdesk(Videos On Desktop) es una interfaz grafica para mplayer hecha en lua y gtk
 
 ## Dependencias
 
-[MPlayer] (http://www.mplayerhq.hu/)
+[MPlayer](http://www.mplayerhq.hu/)
