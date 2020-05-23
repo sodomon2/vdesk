@@ -29,14 +29,14 @@ local app_run      = false
 local main_window  = ui.main_window                     -- invoco la ventana con el id main_window
 local about_window = ui.about_window                    -- invoco la ventana con el id about_window
 
-local btn_correr   = builder:get_object("btn_correr")   -- invoco al boton con el id btn_correr
+local btn_play     = builder:get_object("btn_play")     -- invoco al boton con el id btn_play
 local btn_about    = builder:get_object("btn_about")    -- invoco al boton con el id btn_about
 local btn_cerrar   = builder:get_object("btn_cerrar")   -- invoco al boton con el id btn_cerrar
 local mensaje      = builder:get_object("mensaje")      -- invoco al label con el id mensaje
 local load_file    = builder:get_object("load_file")    -- invoco al boton con el id load_file
-local vdesk_tray   = builder:get_object("vdesk_tray")   -- invoco al trayicon con el id vdesk_tray
+local vdesk_tray   = builder:get_object("vdesk_tray")   -- invoco al statusicon con el id vdesk_tray
 
-function btn_correr:on_clicked()
+function btn_play:on_clicked()
 	local filename = load_file:get_filename()
 	if filename and app_run == false then
         mensaje.label = "Ejecutando"
@@ -61,7 +61,7 @@ function main_window:on_destroy()
     Gtk.main_quit()
 end
 
---funcion para detectar si el trayicon es visible
+-- variable para detectar si la ventana es visible
 local visible = false
 
 -- defino si el trayicon es visible, si es visible muestro la ventana main_window
